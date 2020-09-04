@@ -169,7 +169,24 @@ Git is using a color code in order to display the differences done between the t
 4. Write a command sequence to merge the non-master branch into `master`
 
 ```
+joltenlarremore@Joltens-MacBook-Pro handson % git branch
+* master
+  math
+joltenlarremore@Joltens-MacBook-Pro handson % git merge math
+hint: Waiting for your editor to close the file... 
 
+
+
+
+
+
+Merge made by the 'recursive' strategy.
+ A.py | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+joltenlarremore@Joltens-MacBook-Pro handson % git branch
+* master
+  math
+joltenlarremore@Joltens-MacBook-Pro handson % 
 ```
 
 5. Write a command (or sequence) to (i) create a new branch called `math` (from the `master`) and
