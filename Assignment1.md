@@ -1,4 +1,4 @@
-from math import sqrt
+```from math import sqrt```
 
 # Assignment 1: Python Basics
 
@@ -12,15 +12,17 @@ from math import sqrt
 #### Pythagorean Theorem: (a**2)+(b**2)=(c**2)
 #### Therefore: c = sqrt((a**2)+(b**2))
 
-
+```
 def pythagoreantheorem(length_a, length_b):
     a = float(length_a)
     b = float(length_b)
     c = sqrt((a ** 2) + (b ** 2))
     return c
-    
+ ```
+ 
 ## Example Runs of Problem 1
 
+```
 pythagoreanTheorem(2, 2)
 2.8284271247461903
 
@@ -29,6 +31,7 @@ pythagoreanTheorem(4, 6)
 
 pythagoreanTheorem(8, 5)
 9.433981132056603
+```
 
 ## Problem 2 - List Mangler
 
@@ -39,7 +42,7 @@ pythagoreanTheorem(8, 5)
 #### Else, the number is indicated to be an odd number, and is multiply by 3. For each product, it is added to the
 #### 'new_lst' using the .append() function. The last step is to return the 'new_lst'.
 
-
+```
 def list_mangler(list_in):
     new_lst = []
     for number in list_in:
@@ -61,6 +64,7 @@ list_mangler([5, 6, 7, 8])
 
 list_mangler([9, 10, 11, 12])
 [27, 20, 33, 24]
+```
 
 ## Problem 3 - Grade Calculator
 
@@ -77,6 +81,7 @@ list_mangler([9, 10, 11, 12])
 #### "equ") in the grade_lookup dictionary. Within the loop, I established an if-else conditional statement that returns
 #### the letter grade if "equ" is true; otherwise, the loop continues.
 
+```
 def grade_calc(grades_in, to_drop):
     grades_in.sort()
     deletions = 0
@@ -97,15 +102,18 @@ def grade_calc(grades_in, to_drop):
             return grade_lookup[equ]
         elif equ is False:
             continue
+```
 
 ## Example Runs of Problem 3
 
+```
 grade_calc([100, 90, 80, 95], 2)
 'A'
 grade_calc([60, 80, 74, 78], 1)
 'C' 
 grade_calc([89, 85, 90, 100], 0)
 'A'
+```
 
 ## Problem 4 - Odd & Even Filter
 
@@ -118,7 +126,7 @@ grade_calc([89, 85, 90, 100], 0)
 #### .append(). The last step for the function to perform is to return a list with two sublists. The first sublist contains
 #### contains all even numbers in the input list (out_even), and the second sublist contains all odd numbers (out_odd).
 
-
+```
 def odd_even_filter(numbers):
     lst = numbers
     out_even = []
@@ -129,9 +137,11 @@ def odd_even_filter(numbers):
         else:
             out_odd.append(num)
     return [out_even, out_odd]
+```
     
 ## Example Runs of Problem 4
 
+```
 odd_even_filter([1, 2, 3, 4, 5, 6, 7, 8, 9])
 [[2, 4, 6, 8], [1, 3, 5, 7, 9]]
 
@@ -140,3 +150,5 @@ odd_even_filter([2, 4, 42, 8])
 
 odd_even_filter([37, 20, 91, 54, 4, 29, 100, 30, 1, 78])
 [[20, 54, 4, 100, 30, 78], [37, 91, 29, 1]]
+```
+
