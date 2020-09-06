@@ -219,7 +219,7 @@ print 'I know math, look:'
 print 2+2
 ```
 
-Status: 
+Status: **complete**
 
 7. Write a command (or sequence) to commit your changes
 
