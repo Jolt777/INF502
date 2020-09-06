@@ -516,7 +516,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 joltenlarremore@Joltens-MBP handson % 
 ```
 #### Student's Notes
-When I tried to merge the `math` branch into the `master` branch, a merge conflict is detected. Merge conflicts can happen when the user command git to merge branches that have competing commits. If git detected a merge conflict, then it will tell the user that the automatic merge has failed, and that the conflicts need to be fixed. Also, the user needs to commit on the result.
+When I tried to merge the `math` branch into the `master` branch, a merge conflict is detected. Merge conflicts can happen when the user command git to merge branches that have competing commits. If git detected a merge conflict, then it will tell the user that the automatic merge has failed. It means that git doesn't know what to do, and is asking the user to fix the conflicts. Also, the user needs to commit on the result.
 
 10. Write a set of commands to abort the merge
 
