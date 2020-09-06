@@ -193,8 +193,24 @@ joltenlarremore@Joltens-MacBook-Pro handson %
 (ii) change to this branch
 
 ```
-
+joltenlarremore@Joltens-MBP handson % git branch
+* master
+  math
+joltenlarremore@Joltens-MBP handson % git branch -d math
+Deleted branch math (was e3c629d).
+joltenlarremore@Joltens-MBP handson % git branch
+* master
+joltenlarremore@Joltens-MBP handson % git checkout -b math master
+Switched to a new branch 'math'
+joltenlarremore@Joltens-MBP handson % git branch
+  master
+* math
+joltenlarremore@Joltens-MBP handson % 
 ```
+
+#### Student's Notes
+- `git branch -d BRANCH_NAME` allows git to delete a particular branch
+- `git checkout -b <NEW_BRANCH> <EXISTING_BRANCH>` allows git to create a new branch (i.e. `math`) from the existing branch (i.e. `master`), and then check outs the new branch. The `-b` option allows the following steps to occur in that order.
 
 6. Edit B.py adding the following source code below the content you have there
 
