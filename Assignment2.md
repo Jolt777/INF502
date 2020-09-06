@@ -221,11 +221,247 @@ print 2+2
 
 Status: **complete**
 
+#### Student's Notes
+I used `nano` to edit the python file
+
 7. Write a command (or sequence) to commit your changes
 
 ```
+Last login: Sun Sep  6 10:53:25 on console
+joltenlarremore@Joltens-MBP ~ % cd handson
+joltenlarremore@Joltens-MBP handson % ls
+A.py	B.py
+joltenlarremore@Joltens-MBP handson % git branch
+  master
+* math
+joltenlarremore@Joltens-MBP handson % nano B.py
+joltenlarremore@Joltens-MBP handson % git commit B.py -m "Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation"
+[math 6b74cf2] Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation
+ Committer: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
 
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+joltenlarremore@Joltens-MBP handson % git status
+On branch math
+nothing to commit, working tree clean
+joltenlarremore@Joltens-MBP handson % git log --graph --all
+* commit 6b74cf2c802429651b2d3496cb544f1b1613e021 (HEAD -> math)
+| Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+| Date:   Sun Sep 6 12:08:06 2020 -0700
+| 
+|     Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation
+|   
+*   commit 527e9a9bbed8e216d8a3843758616d678e6303dc (master)
+|\  Merge: 18931d1 e3c629d
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MacBook-Pro.local>
+| | Date:   Fri Sep 4 15:46:43 2020 -0700
+| | 
+| |     Merge branch 'math' into master
+| | 
+| * commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e
+| | Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| | Date:   Wed Aug 14 23:13:48 2019 -0700
+| | 
+| |     Adding some more knowledge to the function
+| | 
+* | commit 18931d12a8be7cac049b73c6bc8136e9482f3371
+|/  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+|   Date:   Wed Aug 14 23:15:28 2019 -0700
+|   
+:...skipping...
+* commit 6b74cf2c802429651b2d3496cb544f1b1613e021 (HEAD -> math)
+| Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+| Date:   Sun Sep 6 12:08:06 2020 -0700
+| 
+|     Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation
+|   
+*   commit 527e9a9bbed8e216d8a3843758616d678e6303dc (master)
+|\  Merge: 18931d1 e3c629d
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MacBook-Pro.local>
+| | Date:   Fri Sep 4 15:46:43 2020 -0700
+| | 
+| |     Merge branch 'math' into master
+| | 
+| * commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e
+| | Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| | Date:   Wed Aug 14 23:13:48 2019 -0700
+| | 
+| |     Adding some more knowledge to the function
+| | 
+* | commit 18931d12a8be7cac049b73c6bc8136e9482f3371
+|/  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+|   Date:   Wed Aug 14 23:15:28 2019 -0700
+|   
+|       Making a small change here
+:...skipping...
+* commit 6b74cf2c802429651b2d3496cb544f1b1613e021 (HEAD -> math)
+| Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+| Date:   Sun Sep 6 12:08:06 2020 -0700
+| 
+|     Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation
+|   
+*   commit 527e9a9bbed8e216d8a3843758616d678e6303dc (master)
+|\  Merge: 18931d1 e3c629d
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MacBook-Pro.local>
+| | Date:   Fri Sep 4 15:46:43 2020 -0700
+| | 
+| |     Merge branch 'math' into master
+| | 
+| * commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e
+| | Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| | Date:   Wed Aug 14 23:13:48 2019 -0700
+| | 
+| |     Adding some more knowledge to the function
+| | 
+* | commit 18931d12a8be7cac049b73c6bc8136e9482f3371
+|/  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+|   Date:   Wed Aug 14 23:15:28 2019 -0700
+|   
+|       Making a small change here
+| 
+:...skipping...
+* commit 6b74cf2c802429651b2d3496cb544f1b1613e021 (HEAD -> math)
+| Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+| Date:   Sun Sep 6 12:08:06 2020 -0700
+| 
+|     Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation
+|   
+*   commit 527e9a9bbed8e216d8a3843758616d678e6303dc (master)
+|\  Merge: 18931d1 e3c629d
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MacBook-Pro.local>
+| | Date:   Fri Sep 4 15:46:43 2020 -0700
+| | 
+| |     Merge branch 'math' into master
+| | 
+| * commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e
+| | Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| | Date:   Wed Aug 14 23:13:48 2019 -0700
+| | 
+| |     Adding some more knowledge to the function
+| | 
+* | commit 18931d12a8be7cac049b73c6bc8136e9482f3371
+|/  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+|   Date:   Wed Aug 14 23:15:28 2019 -0700
+|   
+|       Making a small change here
+| 
+* commit 654b490a181dedf82dd6deda5f9848d6cca05918
+:...skipping...
+* commit 6b74cf2c802429651b2d3496cb544f1b1613e021 (HEAD -> math)
+| Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+| Date:   Sun Sep 6 12:08:06 2020 -0700
+| 
+|     Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation
+|   
+*   commit 527e9a9bbed8e216d8a3843758616d678e6303dc (master)
+|\  Merge: 18931d1 e3c629d
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MacBook-Pro.local>
+| | Date:   Fri Sep 4 15:46:43 2020 -0700
+| | 
+| |     Merge branch 'math' into master
+| | 
+| * commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e
+| | Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| | Date:   Wed Aug 14 23:13:48 2019 -0700
+| | 
+| |     Adding some more knowledge to the function
+| | 
+* | commit 18931d12a8be7cac049b73c6bc8136e9482f3371
+|/  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+|   Date:   Wed Aug 14 23:15:28 2019 -0700
+|   
+|       Making a small change here
+| 
+* commit 654b490a181dedf82dd6deda5f9848d6cca05918
+| Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| Date:   Wed Aug 14 23:12:14 2019 -0700
+| 
+:...skipping...
+* commit 6b74cf2c802429651b2d3496cb544f1b1613e021 (HEAD -> math)
+| Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+| Date:   Sun Sep 6 12:08:06 2020 -0700
+| 
+|     Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation
+|   
+*   commit 527e9a9bbed8e216d8a3843758616d678e6303dc (master)
+|\  Merge: 18931d1 e3c629d
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MacBook-Pro.local>
+| | Date:   Fri Sep 4 15:46:43 2020 -0700
+| | 
+| |     Merge branch 'math' into master
+| | 
+| * commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e
+| | Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| | Date:   Wed Aug 14 23:13:48 2019 -0700
+| | 
+| |     Adding some more knowledge to the function
+| | 
+* | commit 18931d12a8be7cac049b73c6bc8136e9482f3371
+|/  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+|   Date:   Wed Aug 14 23:15:28 2019 -0700
+|   
+|       Making a small change here
+| 
+* commit 654b490a181dedf82dd6deda5f9848d6cca05918
+| Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| Date:   Wed Aug 14 23:12:14 2019 -0700
+| 
+|     Added a draft of A.py
+| 
+:...skipping...
+* commit 6b74cf2c802429651b2d3496cb544f1b1613e021 (HEAD -> math)
+| Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+| Date:   Sun Sep 6 12:08:06 2020 -0700
+| 
+|     Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation
+|   
+*   commit 527e9a9bbed8e216d8a3843758616d678e6303dc (master)
+|\  Merge: 18931d1 e3c629d
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MacBook-Pro.local>
+| | Date:   Fri Sep 4 15:46:43 2020 -0700
+| | 
+| |     Merge branch 'math' into master
+| | 
+| * commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e
+| | Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| | Date:   Wed Aug 14 23:13:48 2019 -0700
+| | 
+| |     Adding some more knowledge to the function
+| | 
+* | commit 18931d12a8be7cac049b73c6bc8136e9482f3371
+|/  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+|   Date:   Wed Aug 14 23:15:28 2019 -0700
+|   
+|       Making a small change here
+| 
+* commit 654b490a181dedf82dd6deda5f9848d6cca05918
+| Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| Date:   Wed Aug 14 23:12:14 2019 -0700
+| 
+|     Added a draft of A.py
+| 
+* commit 2dfb02c3f9383d6c3b2695c99e175d8b85f594a1
+  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+  Date:   Wed Aug 14 23:08:47 2019 -0700
+  
+       Creating all files (all empty)
+~
+joltenlarremore@Joltens-MBP handson % 
 ```
+#### Student's Notes
+- `git commit <FILE_NAME> -m <COMMIT>` allows git to commit on the changes made by the user. The `-m` flag is for the message on the commit.
+- `git status` checks the status on the selected branch.
+- `git log --graph --all` is utilized to check if the recently-made commit is successfully implemented.
 
 8. Change back to the `master` branch and change B.py adding the following source code
 (commit your change to `master`):
