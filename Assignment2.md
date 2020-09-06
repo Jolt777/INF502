@@ -484,6 +484,22 @@ Changes not staged for commit:
 	modified:   B.py
 
 no changes added to commit (use "git add" and/or "git commit -a")
+joltenlarremore@Joltens-MBP handson % git commit -a -m "Add a new line to B.py"
+[master 13ea041] Add a new line to B.py
+ Committer: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
 joltenlarremore@Joltens-MBP handson % 
 ```
 
@@ -491,8 +507,16 @@ joltenlarremore@Joltens-MBP handson %
 happened
 
 ```
-
+joltenlarremore@Joltens-MBP handson % git checkout math
+Switched to branch 'math'
+joltenlarremore@Joltens-MBP handson % git merge master
+Auto-merging B.py
+CONFLICT (content): Merge conflict in B.py
+Automatic merge failed; fix conflicts and then commit the result.
+joltenlarremore@Joltens-MBP handson % 
 ```
+#### Student's Notes
+When I tried to merge the `math` branch into the `master` branch, a merge conflict is detected. Merge conflicts can happen when the user command git to merge branches that have competing commits. If git detected a merge conflict, then it will tell the user that the automatic merge has failed, and that the conflicts need to be fixed. Also, the user needs to commit on the result.
 
 10. Write a set of commands to abort the merge
 
