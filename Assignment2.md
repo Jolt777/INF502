@@ -467,7 +467,24 @@ joltenlarremore@Joltens-MBP handson %
 (commit your change to `master`):
 
 ```
+joltenlarremore@Joltens-MBP handson % git branch
+  master
+* math
+joltenlarremore@Joltens-MBP handson % git checkout master
+Switched to branch 'master'
+joltenlarremore@Joltens-MBP handson % git branch
+* master
+  math
+joltenlarremore@Joltens-MBP handson % nano B.py
+joltenlarremore@Joltens-MBP handson % git commit -m "Add a new line in B.py" 
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   B.py
 
+no changes added to commit (use "git add" and/or "git commit -a")
+joltenlarremore@Joltens-MBP handson % 
 ```
 
 9. Write a command sequence to merge the `math` branch into `master` and describe what
