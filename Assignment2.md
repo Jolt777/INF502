@@ -521,7 +521,7 @@ When I tried to merge the `math` branch into the `master` branch, a merge confli
 10. Write a set of commands to abort the merge
 
 ```
-
+joltenlarremore@Joltens-MBP handson % git merge --abort
 ```
 
 11. Now repeat item 9, but proceed with the manual merge (Editing B.py). All implemented
