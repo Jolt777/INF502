@@ -528,15 +528,134 @@ joltenlarremore@Joltens-MBP handson % git merge --abort
 functions are needed. Explain your procedure
 
 ```
+joltenlarremore@Joltens-MBP handson % git merge master
+Auto-merging B.py
+CONFLICT (content): Merge conflict in B.py
+Automatic merge failed; fix conflicts and then commit the result.
+joltenlarremore@Joltens-MBP handson % git status
+On branch math
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
 
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   B.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+joltenlarremore@Joltens-MBP handson % nano B.py
+joltenlarremore@Joltens-MBP handson % cat B.py
+# Another file that will receive a line of code... at least.
+print 'I know math, look:'
+print 2+2
+print 'hello world!'
+joltenlarremore@Joltens-MBP handson % git add B.py
+joltenlarremore@Joltens-MBP handson % git status
+On branch math
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   B.py
+
+joltenlarremore@Joltens-MBP handson % git commit
+[math 2c58b97] Merge branch 'master' into math
+ Committer: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+joltenlarremore@Joltens-MBP handson % 
 ```
+
+#### Procedures
+- First, checkout to `math` branch, and type in `git merge master` to start the manual merge of the math branch into the master branch
+- Second, type `git status` to display the state of the working directory and the staging area. Upon executing the command, git tells the user that there are unmerged paths on the branch `math`, as well as giving out a few vital commands to fix the conflicts and complete the merge.
+- Third, use `nano` on the file `B.py` to edit the file by deleting all conflict markers: `<<<<<<< HEAD`, `=======`, `>>>>>>> BRANCH_NAME`
+- Next, type `cat B.py` to view the contents of B.py on the standard output. This is to check to see if the disired changes made on the file has been made (i.e. no conflict markers).
+- Then, type `git add B.py` to mark the resolution. In other words, add the `B.py` file to the index.
+- After that step, type `git status` agian to make sure that the changes are committed, and all conflicts are fixed.
+- Finally, type `git commit` to finalized the merge.
 
 12. Write a command (or set of commands) to proceed with the merge and make `master` branch
 up-to-date
 
 ```
-
+joltenlarremore@Joltens-MBP handson % git branch
+  master
+* math
+joltenlarremore@Joltens-MBP handson % git checkout master
+Switched to branch 'master'
+joltenlarremore@Joltens-MBP handson % git branch
+* master
+  math
+joltenlarremore@Joltens-MBP handson % git status
+On branch master
+nothing to commit, working tree clean
+joltenlarremore@Joltens-MBP handson % git log --graph --all
+*   commit 2c58b97d5016d6b09475d87e7820896ff53a9812 (math)
+|\  Merge: 6b74cf2 13ea041
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+| | Date:   Sun Sep 6 17:07:08 2020 -0700
+| | 
+| |     Merge branch 'master' into math
+| | 
+| * commit 13ea0415674ecef33de5fec8140a01141b3e3639 (HEAD -> master)
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+| | Date:   Sun Sep 6 13:49:11 2020 -0700
+| | 
+| |     Add a new line to B.py
+| | 
+* | commit 6b74cf2c802429651b2d3496cb544f1b1613e021
+|/  Author: Jolten Larremore <joltenlarremore@Joltens-MBP.PK5001Z>
+|   Date:   Sun Sep 6 12:08:06 2020 -0700
+|   
+|       Adding two print functions; one is a statement of declaration on having knowledge of math, and the other is a math equation
+|   
+*   commit 527e9a9bbed8e216d8a3843758616d678e6303dc
+|\  Merge: 18931d1 e3c629d
+| | Author: Jolten Larremore <joltenlarremore@Joltens-MacBook-Pro.local>
+| | Date:   Fri Sep 4 15:46:43 2020 -0700
+| | 
+| |     Merge branch 'math' into master
+| | 
+| * commit e3c629dd524712aedea96d7dbaad1c50d12b5b5e
+| | Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| | Date:   Wed Aug 14 23:13:48 2019 -0700
+| | 
+| |     Adding some more knowledge to the function
+| | 
+* | commit 18931d12a8be7cac049b73c6bc8136e9482f3371
+|/  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+|   Date:   Wed Aug 14 23:15:28 2019 -0700
+|   
+|       Making a small change here
+| 
+* commit 654b490a181dedf82dd6deda5f9848d6cca05918
+| Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+| Date:   Wed Aug 14 23:12:14 2019 -0700
+| 
+|     Added a draft of A.py
+| 
+* commit 2dfb02c3f9383d6c3b2695c99e175d8b85f594a1
+  Author: Igor Steinmacher <igorsteinmacher@gmail.com>
+  Date:   Wed Aug 14 23:08:47 2019 -0700
+  
+       Creating all files (all empty)
+joltenlarremore@Joltens-MBP handson %         
 ```
+
+#### Student's Notes
+- The merge is already explained upon answering the previous question (#11)
+- When executing the command `git status`, the ideal message shown is `nothing to commit, working tree clean`. This means that all the files in the current repo are being managed by git, and the most recent version of the file has been committed.
 
 ## Part 2: Using GitHub
 
