@@ -673,5 +673,16 @@ structure your markdown the way you want):
 used, and hurdles faced (within the file you create for **part 1**)
 
 ```
-
+To sum up my experience of this part of the assignment, I have to say that it's not really that bad. In my honest opinion, I was expecting it to be challenging, but it's really a cake walk. In other words, I encountered no hurdles in completing this part of the assignment. Here are the procedures that I took in order to see a successful submission:
+1. On GitHub, in a repository titled 'igorsteinmacher/INF502-Fall2020', I click on the student's folder to enter.
+2. Inside the student's folder, I create a file called 'Larremore_Jolten.md'.
+3. During the creation of the file using markdown, I have it structured it to include the following information about the last paper that I read. I decided to use a research paper titled "The Evolution of Human Cancer Gene Duplication across Mammals", written by Marc Tollis, Aika K. Schneider-Utaka, and Carlo C. Maley.
+The following is a list of commands/formatting changes, etc. made in the creation of the Markdown file:
+	* For the title, I used the <h1> tag (#) to make it appear in big, bold letters.
+	* For the venue (journal name/conference), I first use the bold command (**TEXT**) on the subtitle "Venue (Journal Name/Conference):". After a single space from the subtile, I typed in the name of the journal that this paper is published under, and that is "Molecular Biology and Evolution". Then on a new line below the subtitle, I pressed *tab* and put an asterisk (*) in order to make a comment. The comment is on the publisher of the science journal, which is the Oxford University Press on the behalf of the Society for Molecular Biology and Evolution.
+	* For the number of pages, I bolded the subtitle "Number of Pages:", and then typed in a space and a the number 12 (as accordance to the PDF version of the paper).
+	* For the 3 outcomes of the paper, I bolded the subtitle, "Three Outcomes of the Paper: ". Then in new lines, I listed (numerically) the three most significant results from the paper. I also provide detail explanation(s) in a form of an unordered list under each result. This is to provide clarification on the subject matter at hand.
+	* For the link to the paper online, I bolded the subtitle "Linke to the Paper Online: ", and then copy and paste the link to the Markdown file.
+4. Once all the right information is put in and orderly structured, I pressed the "present new file" button to finalized the creation of the Markdown file.
+5. Lastly, I checked to make sure the file is ready to be send back to the "igorsteinmacher/INF502-Fall2020", and I pressed the "create pull request" to comence the action.
 ```
