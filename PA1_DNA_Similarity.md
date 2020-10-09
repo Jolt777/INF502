@@ -18,7 +18,8 @@
 
 ### Results
 ### Number of Matches Approach
-#### Files Used
+
+**Files Used**:
 * Seq1.txt ---> ACTGACTTTT
 * Seq2.txt ---> TTTAGCCGAT
 
@@ -28,7 +29,8 @@
 
 
 ### Maximum Chain Approach
-### Files Used
+
+**Files Used:**
 * Seq1.txt ---> ACTGACTTTT
 * Seq2.txt ---> TTTAGCCGAT
 
@@ -42,4 +44,4 @@
 
 
 
-### Maximum Chain Approach
+#### Maximum Chain Approach
