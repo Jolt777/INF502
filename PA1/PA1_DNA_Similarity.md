@@ -5,6 +5,28 @@
 ## Course: INF502
 ## Date: 10/08/2020
 
+
+
+## Igor Feedback
+
+* Overall: Maximum score works. Contiguous chain does not. Too many prints makes it really hard to read. The errors are found with if/else, but the algorithm is not stopped. The function names are not meaningful. Max contiguous does not work. The input as a string is not a good decision (use an int or single char). See comments in the code. Last submission was late.
+
+* Number of matches: Correct, but it does not show WHICH configuration is the best one (number of shifts).
+* Maximum chain: Does not give the right answer
+* User-input: OK. But I need to restart if there is one error (filename for example), and I need to use a string
+* Max Shift: OK
+* Exception handling/checks: It is there, but does not catch and treat. I even receive an IndexError when the sequences have different length
+    - Files: OK!
+    - Conversions: OK
+    - Inputs: OK... But, errors appear just after input everything (If a filename is wrong, let me know, and let me provide another file)
+    - same size, no bad chars, etc.: See above.
+* Functions: Good
+
+* Variable + function names: Not good
+
+* **Your grade is 50/100**
+
+
 ### Short Description of my Solution Appoarch in Implementing the Algorithm
 #### (as explained one function at a time)
     * import os
@@ -136,9 +158,16 @@
 ### Source Code
 
 ```
+#Igor: nothing happens if the length of the sequences are the same.
+#getting an exception (IndexError).
+#The same for the char diff than ACTG
+#TOO MANY PRINTS...
+#The algorithm does not tell me what is the number of shifts for the
+#max score or max contiguous 
 import os
 
-
+#Igor: function name does not tell me anything
+#You got the problem, but the algorithm does not stop...IndexError
 def important(s1, s2):
     if not len(s1) == len(s2):
         print("The lengths of the two DNA sequences does not match.")
@@ -148,10 +177,12 @@ def important(s1, s2):
     else:
         print("The sequences are the same length! Please continue.")
 
-
+#Igor: getting error here because the code is considering the line break
+# although my file has no bad character, I am receiving a "I found an error"
+#Moreover, the algorithm does not stop when this happens
 def vital(s):
     nucleotides = ['A', 'T', 'C', 'G']
-    for i in s:
+    for i in s.strip():
         if i not in nucleotides:
             print("I found an error")
             return False
@@ -179,8 +210,8 @@ def num_of_matches(s1, s2, ms):
     # initiate the "important" function, taking in sequence 1 and sequence 2 as the inputs.
     important(s1, s2)
     # initiate the "vital" function, taking in sequence 1 and sequence 2 as the inputs.
-    vital(s1)
-    vital(s2)
+    #vital(s1)
+    #vital(s2)
     print("\n")
     # "shift" for the current shift position.
     shift = -1
@@ -265,11 +296,11 @@ def collect_max_cm(collection_1, collection_2):
 def max_value(contiguous):
     return max(contiguous)
 
-
+#Igor: THis does not work...
 def max_chain(s1, s2, ms):
     important(s1, s2)
-    vital(s1)
-    vital(s2)
+    #vital(s1)
+    #vital(s2)
     print("\n")
     s = -1
     x1 = 0
@@ -287,10 +318,10 @@ def max_chain(s1, s2, ms):
             if lr < ms:
                 s1n1 = ("-" * x1) + s1
                 s2n1 = s2 + ("-" * x1)
-                print(s1n1)
-                print(s2n1)
+             #   print(s1n1)
+             #   print(s2n1)
                 collection_1, collection_2 = nm_remove(s1n1, s2n1)
-                print("\n")
+             #   print("\n")
                 contiguous = collect_max_cm(collection_1, collection_2)
             else:
                 if lr == ms:
@@ -336,6 +367,7 @@ def print_intro():
 def user_input():
     os.system('clear')
     print_intro()
+    #Igor: Please use number or single char instead of a long string as input
     ms = int(input("Enter the maximum shift: "))
     approach = str(input("Enter the approach that you want to use (number of matches/maximum chain): "))
     file_1 = str(input("Enter the name of the first input file: "))
